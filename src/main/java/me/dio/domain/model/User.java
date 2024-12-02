@@ -16,11 +16,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 120)
     private String name;
-    @OneToOne(mappedBy = "user_id")
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Account account;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Card card;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<New> news;
 
 
