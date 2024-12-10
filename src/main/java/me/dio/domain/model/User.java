@@ -18,7 +18,7 @@ public class User {
     private Long id;
     @Column(length = 120)
     private String name;
-
+    private String password;
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
@@ -30,6 +30,5 @@ public class User {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<New> news;
-
 
 }
