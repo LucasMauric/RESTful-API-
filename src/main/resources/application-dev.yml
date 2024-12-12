@@ -18,3 +18,7 @@ spring:
         settings:
           trace: false
           web-allow-others: false
+    security:
+      jwt:
+        secret: "======================jwt-tokens-that-should-be-changed-production==================="
+        expiration: 800000000

@@ -3,7 +3,6 @@ package me.dio.domain.service.impl;
 import me.dio.domain.model.Account;
 import me.dio.domain.model.User;
 
-import me.dio.domain.model.form.UserSignin;
 import me.dio.domain.model.form.UserSignup;
 import me.dio.domain.repository.AccountRepository;
 import me.dio.domain.repository.UserRepository;
@@ -30,7 +29,7 @@ public class UserServiceImpl implements UserService {
        if(user.isPresent()){
            new IllegalArgumentException("Usuário já existe na base de dados!");
        }else{
-           novoUsuario.setName(userSignup.getName());
+           novoUsuario.setUsername(userSignup.getName());
            novoUsuario.setPassword(userSignup.getPassword());
            Optional<Account> account = accountRepository.findById(userSignup.getAccount().getId());
 
