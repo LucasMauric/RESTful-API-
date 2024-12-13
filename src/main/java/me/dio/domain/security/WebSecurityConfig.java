@@ -1,7 +1,7 @@
-package me.dio.domain.secutiry;
+package me.dio.domain.security;
 
-import me.dio.domain.secutiry.Exception.AuthEntryPointJwt;
-import me.dio.domain.secutiry.Filter.FilterTokenJWT;
+import me.dio.domain.security.Exception.AuthEntryPointJwt;
+import me.dio.domain.security.Filter.FilterTokenJWT;
 import me.dio.domain.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableMethodSecurity
-public class WebSecutiryConfig {
+public class WebSecurityConfig {
     @Autowired
     private AuthEntryPointJwt authEntryPointJwt;
     @Autowired

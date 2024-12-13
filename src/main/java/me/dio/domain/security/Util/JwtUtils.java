@@ -1,4 +1,4 @@
-package me.dio.domain.secutiry.Util;
+package me.dio.domain.security.Util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

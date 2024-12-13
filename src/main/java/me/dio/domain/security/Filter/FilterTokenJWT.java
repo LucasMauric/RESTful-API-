@@ -1,10 +1,10 @@
-package me.dio.domain.secutiry.Filter;
+package me.dio.domain.security.Filter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import me.dio.domain.secutiry.Util.JwtUtils;
+import me.dio.domain.security.Util.JwtUtils;
 import me.dio.domain.service.impl.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
